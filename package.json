@@ -1,0 +1,23 @@
+{
+  "name": "js-tdd",
+  "version": "1.0.0",
+  "description": "Project to test TDD best practices with JS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kgfelix/js-tdd.git"
+  },
+  "keywords": [
+    "js",
+    "tdd"
+  ],
+  "author": "Kleber Felix <teste@teste.com> (https://github.com/kgfelix)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kgfelix/js-tdd/issues"
+  },
+  "homepage": "https://github.com/kgfelix/js-tdd#readme"
+}
