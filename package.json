@@ -4,7 +4,10 @@
   "description": "Project to test TDD best practices with JS",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "./node_modules/.bin/eslint src/*.js",
+    "hello": "echo \"Hello World\"",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepush": "npm run lint"
   },
   "repository": {
     "type": "git",
@@ -19,5 +22,11 @@
   "bugs": {
     "url": "https://github.com/kgfelix/js-tdd/issues"
   },
-  "homepage": "https://github.com/kgfelix/js-tdd#readme"
+  "homepage": "https://github.com/kgfelix/js-tdd#readme",
+  "devDependencies": {
+    "eslint": "^6.5.1",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "husky": "^3.0.9"
+  }
 }
