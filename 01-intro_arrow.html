@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <body>
+            <script>
+                const ireland = ['Dublin','Galway','Cork']
+
+                //Map get and array and retirn another array from last array
+                const love = ireland.map(
+                    function(name){
+                        return `I love ${name}`;
+                    }
+                );
+
+                const loveArrow = ireland.map(
+                    (name) => {
+                        return `I love ${name}`;
+                    }
+                );
+
+                // I have only one parameter, the parenthesis is not necessary
+                const loveArrowSingle = ireland.map(
+                    name => {
+                        return `I love ${name}`;
+                    }
+                );
+
+                 // single line, return amd { } is not necessary
+                 const loveArrowOneSingle = ireland.map( name => `I love ${name}` );
+
+                 const loveChain = ireland
+                                    .filter(name  => name === 'Dublin' )
+                                    .map( name => `I love ${name}` );
+
+                console.log(loveChain);
+
+                /*
+                USE OF THIS
+                this -> referes the local context
+                In arrow function this get the context of window or global object.
+                Map get and array and retirn another array from last array
+                */
+
+
+            </script>
+        </body>
+    </head>
+</html>

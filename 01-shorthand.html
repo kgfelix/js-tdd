@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>01 - Shorthand Properties</title>
+</head>
+<body>
+</body>
+
+<script>
+    /*
+    Fica mais fácil de ler e escrevemos bem menos
+    */
+    let firstName = 'Willian';
+    let surname = 'Justen';
+    let age = 26;
+
+    // No ES5
+    const person = {
+        firstName: firstName,
+        surname: surname,
+        age: age,
+
+        /* funções dentro de objetos*/
+        hello: function() {
+            console.log('Hello!')
+        }
+    };
+
+    //No ES6 com Shorthand Properties
+    const person2 = {
+        firstName,
+        surname,
+        age,
+
+        hello() {
+            console.log('Hello!')
+        }
+    };
+
+
+    console.log(person);
+    person.hello();
+
+    console.log(person2);
+    person2.hello();
+</script>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <body>
+            <script>
+                /*VAR global a não ser que estejam dentro de um bloco.
+                escopo somente em funções ou globais
+                
+                Quando uma variável é criada com var o JS faz uma varredura no código
+                e coloca e coloca a declaração no início, quando tento usar apresenta mensagem
+                "undefined" com o let e const ele não coloca no início e gera um erro,
+                isso é chamado de TEMPORAL DEAD ZONE.         
+                 */
+                var animal = 'cat';
+
+                /*
+                LET: É pemitido criar uma variável com o mesmo nome dentro de um bloco.
+                let variável de bloco.
+                Importante para garantir que a variável vai existir uma única vez
+                no escopo e nao poderá ser rescrita fora desse escopo.
+                */
+                {
+                    let animal = 'cat';
+                }
+
+                /*
+                Constante
+                */         
+                const kgf = {
+                    name: 'Teste',
+                    age: 51
+                };                
+
+                console.log(kgf);
+
+                Object.freeze(kgf); //torna o objeto imutável
+
+                kgf.age = 49;               
+
+                console.log(kgf);
+
+            </script>
+        </body>
+    </head>
+</html>

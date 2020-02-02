@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>03 - Tagged Template Literal</title>
+</head>
+
+<style>
+    .green {
+        color: green;
+        font-size: 25px;
+    }
+</style>
+<body>
+</body>
+
+<script>
+    /*
+    Consegue usar uma função na frente do nosso texto e fazer 
+    algumas modificações nele.
+
+    Pode trocar uma variável por outra variável,
+    Varre um templante literal e faz o que quiser.
+
+    */
+    const city = 'Dublin';
+    const something = 'Guinness';
+    const otherThing = 'Leprechaums';
+    
+    /* Primeiro parâmetro é o template, um array cada parte do texto que não é variáveil
+    Segundo parâmetro são as variáveis do meu template literal 
+    */
+     function green(template, ...values) {
+        return template.reduce((accumulator, part, i) => {
+            return ` 
+                ${accumulator}
+                <span class="green">${values[i - 1].toUpperCase()}</span>
+                ${part}
+            `
+        });
+    }
+    const ireland = green`I live in ${city} the city of ${something} and ${otherThing}!`;
+    document.body.innerHTML = ireland;
+</script>
+</html>

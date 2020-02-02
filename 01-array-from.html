@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <text>01 - Array from</text>
+        <body>
+            <ul id="list">
+                <li>Lorem</li>
+                <li>ipsum</li>
+                <li>dolor</li>
+            </ul>
+        </body>        
+        <script>
+            const text = 'Kleber';
+            //Transforma a String em um array.
+            console.log(Array.from(text));
+
+            //Transforma um NodeList em um array
+            const list = document.querySelectorAll('#list li');
+            const listArray = Array.from(list);
+            console.log(listArray);
+
+            const names = listArray.map((name) => name.textContent);
+            console.log(names);
+        </script>        
+    </head>
+</html>

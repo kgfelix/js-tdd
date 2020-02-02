@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>02 - Use template literals</title>
+        <body>
+            <script>
+                /*
+                Template literals
+                Permite criar strings com varies internas e concatenar etc.
+                */
+
+                const article = {
+                    title: 'Aprendendo Template Strings',
+                    intro: 'Uma breve explicação de como se utlizar template strings do ES6 em seu código hoje',
+                    body: 'Mussum Ipsum, cacilds vidis litro abertis. In elementis mé pra quem é amistosis quis leo. Aenean aliquam molestie leo, vitae iaculis nisl. Suco de cevadiss,    é um leite divinis, qui tem lupuliz, matis, aguis e fermentis. Quem num gosta di mé, boa gentis num é.',
+                    tags: ['es6','js','template-literal'],
+                    author: 'Kleber'
+                };
+
+                function renderAuthor(name) {
+                    return (name) ? name : 'unknown';
+                }
+
+               
+
+
+                const markup = `<article>
+                    <header>
+                        <h1>${article.title}</h1>
+                    </header>
+                    <section>
+                        <p><${article.intro}</p>
+                    </section>
+                    <footer>
+                        <ul>
+                            ${article.tags.map((tag) => `<li>${tag}</li>`).join('')}
+                        </ul>
+                        <p>Author: ${renderAuthor(article.author)}</p>
+                    </footer>
+                </article>`;
+
+                document.body.innerHTML = markup;
+
+            </script>
+        </body>
+    </head>
+</html>

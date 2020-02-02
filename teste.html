@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>02 - Default Parameters</title>
+</head>
+<body>
+</body>
+
+<script>
+    /*
+        Evitar erro 'undefined' porque não recebeu parâmetro
+    */
+    var hello = function ola(msg = 'Hello') {
+        console.log(msg);
+    };
+
+    var hello2 = function(msg = 'Hello') {
+        console.log(msg);
+    };
+
+    console.log(hello());
+
+    
+
+</script>
+</html>
