@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <text>04 - Array.find e Array.findIndex</text>
+        <body>
+        </body>        
+        <script>
+            //Procurar: o primeiro procura um dado, objeto e valor. e o segundo procura um index dentro de um array
+            //Bastante eficiente para buscar dados de uma api, por exemplo
+            const data = [
+                {
+                    name: 'Kleber',
+                    age: 42,
+                    city: 'Curitiba'
+                },
+                {
+                    name: 'Den',
+                    age: 41,
+                    city: 'São Paulo'
+                }
+            ];
+
+            const array = [4, -5, 0, -1];
+
+            //O find espera um condição para buscar os dados, reponde a primeira ocorrencia que corresponde a condição
+            const underZero = array.find(x => x < 0);
+
+            //Mostra o index que atende a condição
+            const underZeroIndex = array.findIndex(x => x < 0);
+
+            console.log(underZeroIndex);
+
+            //Pode trabalhar com array complexo
+
+            const kleber = data.find(person => person.name === 'Kleber');
+            const kleberIndex = data.findIndex(person => person.name === 'Kleber');
+            console.log(kleber);
+
+
+        </script>        
+    </head>
+</html>

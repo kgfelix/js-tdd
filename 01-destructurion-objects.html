@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>01 - Destructuring Objects</title>
+</head>
+<body>
+</body>
+
+<script>
+    /*
+    Permite pegar elementos e criar variaveis as aprtir de objetos e outros 
+    elementos de maneira bem mais fácil.
+    */
+    const data = {
+        name: 'Kleber',
+        surname: 'Felix',
+        age: 30,
+        blog: 'https://teste.com',
+        social: {
+            twitter: '@teste',
+            facebook: '/teste'
+        }
+    };
+
+    //Sintaxe
+    const { name, surname } = data;
+    console.log(name);
+    console.log(surname);
+
+    const { facebook, twitter } = data.social;
+
+    console.log(facebook);
+    console.log(twitter);
+
+    const { facebook: fb } = data.social;
+
+    console.log(fb);
+
+    const { city = 'Curitiba' } = data;
+
+    console.log(city);
+    
+</script>
+</html>
