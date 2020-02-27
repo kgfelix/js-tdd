@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>01 - Spread Operator Intro</title>
+</head>
+<body>
+</body>
+
+<script>
+    /*
+    Serve para pegar elementos que são iteráveis e desmembrar em pequenas partes.
+    Separar strings, elementos.
+    */
+    let front = ['React','vue','Angular'];
+    let back = ['python','ruby','nodejs'];
+
+    
+
+    console.log(...'kleber');
+    //criar array a partir de uma string
+    console.log([...'kleber']);
+
+    console.log(...front);
+
+    //concaneter arrays e adicioanr novo elemento de maneira facil
+    let fullstack = [...front,...back];
+    console.log(fullstack);
+
+    let fullstack2 = [...front,'Rxjs',...back];   
+    console.log(fullstack2);
+ 
+    
+</script>
+</html>

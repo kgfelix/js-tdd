@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <text>01 - Promises Intro</text>
+        <body>
+        </body>        
+        <script>
+        //Promise (promessa) é um objeto com uma ação que não foi finalizada
+        //mas que no futuro será finalizada de alguma forma
+        //É importante para trabalharmos com dados assyncronos
+        //No objeto Promise passamos um método e dentro desse método recebe dois parâmetros
+        var defer = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                if (true) {
+                    resolve('Hello! It works');
+                } else {
+                    reject('Error!');
+                }
+            }, 2000);            
+        });
+
+        //Método then (quando finalizar faça alguma coisa)
+        //Posso encadear métodos
+        //then pode ser alinhado
+        defer
+            .then((data) => {
+                console.log(data);
+                return 'foo';
+            })
+            .then((data) => console.log(data))// recebe o retorno do then acima
+            .catch((err) => console.log(err));
+
+        </script>        
+    </head>
+</html>
