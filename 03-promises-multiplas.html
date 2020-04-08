@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <text>02 - Promises Multiplas</text>
+        <body>
+        </body>        
+        <script>
+            const currency = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve({ currency: 'euro', value: 3.50 });
+                }, 2000);
+            });
+
+            const countries = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve([ 'Ireland', 'England', 'Scotland' ]);
+                }, 600);
+            });
+
+            //Espera todas as promisses
+            /*Promise
+                .all([currency, countries])
+                .then(responses => {
+                    console.log(responses);
+                })*/
+
+            //Race esperar pela mais rapida e ignora o resto
+            //É ultil quando está fazendo requisição de vários lugares,
+            //mas so a primeira que importa
+            Promise
+                .race([currency, countries])
+                .then(responses => {
+                    console.log(responses);
+                })
+        
+        </script>        
+    </head>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <text>02 - Promises Example</text>
+        <body>
+        </body>        
+        <script>
+            var posts = fetch('http://dummy.restapiexample.com/api/v1/employees');
+
+            //A promise tem 3 status importantes
+            //pending
+            //resolved
+            //rejected
+
+            posts
+                .then(data => data.json())
+                //.then(data => console.log(data));
+                .then(data => data.data.map(post => {
+                    console.log(post.employee_name);
+                }))
+                .catch(err => console.error(err));
+        
+        
+        </script>        
+    </head>
+</html>
